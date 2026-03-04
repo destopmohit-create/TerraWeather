@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#00b4d8">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <title>TerraWeather — India Cities</title>
+</head>
+<body data-page="cities">
+  <div class="corner-deco tl"></div><div class="corner-deco tr"></div>
+  <div class="corner-deco bl"></div><div class="corner-deco br"></div>
+  <nav class="navbar">
+    <a class="nav-brand" href="index.html"><div class="brand-icon">T</div><div><div class="brand-name">TerraWeather</div><span class="brand-sub">INDIA WEATHER INTELLIGENCE</span></div></a>
+    <div class="nav-links">
+      <a href="index.html"><span class="icon">⌂</span> Dashboard</a>
+      <a href="forecast.html" ><span class="icon">◈</span> Forecast</a>
+      <a href="cities.html" class="active"><span class="icon">◉</span> India Cities</a>
+      <a href="alerts.html"><span class="icon">◬</span> Alert Center</a>
+    </div>
+    <div class="nav-right"><div class="live-badge"><span class="live-dot"></span>LIVE</div><div id="navClock">--:--:--</div></div>
+  </nav>
+  <nav class="bottom-nav">
+    <a href="index.html"><span class="bn-icon">⌂</span>Home</a>
+    <a href="forecast.html" class="active"><span class="bn-icon">◈</span>Forecast</a>
+    <a href="cities.html" class="active"><span class="bn-icon">◉</span>Cities</a>
+    <a href="alerts.html"><span class="bn-icon">◬</span>Alerts</a>
+  </nav>
+  <div class="loader" id="loader"><div class="loader-inner"><div class="loader-hex"></div><div class="loader-text">FETCHING DATA...</div></div></div>
+  <div class="page cities-page">
+    <div class="section-header">
+      <div class="section-eyebrow">Live City Monitor</div>
+      <h1 class="section-title">India <span>City Grid</span></h1>
+    </div>
+    <div class="cities-grid" id="citiesGrid">
+      <div class="empty-state" style="grid-column:1/-1"><div class="loader-hex" style="margin:0 auto 20px"></div><div class="empty-text">LOADING CITY DATA...</div></div>
+    </div>
+  </div>
+  <footer class="footer">
+    <span class="footer-brand">TERRAWEATHER v3.0</span>
+    <span>POWERED BY OPENWEATHERMAP + MYSQL</span>
+    <span>INDIA WEATHER INTELLIGENCE PLATFORM</span>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
